@@ -10,6 +10,11 @@
 
 ## 1. Product vision
 
+**Official name, everywhere: VIA-WE Services Pvt. Ltd.** `PUBLIC-READY`
+**Exact tagline: `YOUR DREAMS OUR AIM`** — no comma. `PUBLIC-READY`
+
+> **"360" is a strategic and visual concept, never a written brand name.** Never write `Via-We 360`, `VIA-WE 360`, or `Via-We 360 Services Pvt. Ltd.` See [AGENTS.md §3a](AGENTS.md).
+
 Via-We is a **Business Growth & Execution Company**. `[CONFIRMED]`
 
 > Via-We brings digital marketing, business setup, franchise expansion, technology development, and recruitment under one coordinated execution team.
@@ -17,6 +22,16 @@ Via-We is a **Business Growth & Execution Company**. `[CONFIRMED]`
 **Headline:** *We Build, Brand & Grow Businesses.* `[CONFIRMED]`
 
 **Core difference:** Via-We is not only a digital-marketing agency. It coordinates parts of business execution that are normally split across different vendors. The product is the **coordination**, not the individual services — every competitor can list services; few can hold the whole engagement.
+
+**Approved positioning pattern** `[PROPOSED]`:
+
+> "Via-We is a 360-degree business execution company bringing branding, business setup, franchise solutions, technology and recruitment together through one connected system."
+
+> **This exact sentence is `[PROPOSED]`, not `PUBLIC-READY`.** The concept is confirmed; the wording awaits final copy sign-off (`AGENTS.md` rule 1).
+
+**Guardrail.** "360-degree" describes *connected coverage across the five active services*, not omnicompetence. **Never claim Via-We performs literally every possible service.**
+
+The 360 concept is expressed **visually** — through the orbital motion in [ADR-004](docs/decisions/ADR-004-logo-led-extensible-service-motion.md) — and **in prose**, never in the logo, wordmark, name or tagline.
 
 **Version 1 is a premium, highly animated corporate and lead-generation website** with future application expansion.
 

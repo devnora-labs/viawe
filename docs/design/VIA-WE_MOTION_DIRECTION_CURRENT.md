@@ -33,16 +33,22 @@ This is a deliberate change of ambition. The superseded motion system permitted 
 
 The logo sequence described in [ADR-004](../decisions/ADR-004-logo-led-extensible-service-motion.md) §2 and `docs/product/VIA-WE_CURRENT_BUSINESS_TRUTH_v2.md` §6:
 
+**Updated 2026-08-01** — the sequence now carries the **360 concept**, per Vijay's confirmation.
+
 | Beat | What happens | What it communicates |
 |---|---|---|
-| 1 | Two curves separated | Fragmentation — the problem Via-We solves |
-| 2 | They enter from opposite sides | Two parties approaching |
-| 3 | The mesh connection resolves as they meet | **Partnership.** This is the thesis beat |
-| 4 | The full Via-We symbol forms | Identity |
-| 5 | The symbol expands into active service segments | The five pillars as facets of one mark, not a list |
-| 6 | A segment reveals real work, people, campaigns, outcomes | Proof, as it becomes available |
+| 1 | The official VIA-WE symbol **forms from its existing curves and connection mesh** | Identity, built from the real mark |
+| 2 | A **complete circular / orbital motion** develops around the mark | **360-degree coverage — expressed visually, never written** |
+| 3 | Active services appear as **connected segments** around the central system | Five services as facets of one system, not a list |
+| 4 | The segments **complete a full 360-degree journey** | Connectedness and completeness |
+| 5 | Each segment reveals real work, capabilities or outcomes | Proof, as it becomes available |
+| 6 | The animation **returns to / resolves around the unchanged official logo** | The mark is the constant; the services orbit it |
 
-**What makes this worth exploring:** the sequence *is* the positioning argument. Separate → connect → expand is exactly what "coordinated execution company" means. Motion is carrying meaning, which is the only defensible reason for it to exist.
+**Why this form.** "360" is a strategic concept that **must not be written into the logo**. An orbital sequence completing a full revolution around the unchanged mark expresses complete, connected coverage without adding a character to the artwork. The meaning and the brand constraint agree — which is the strongest reason to keep a motion idea.
+
+**What makes this worth exploring:** the sequence *is* the positioning argument. Form → orbit → connect → complete is exactly what "360-degree business execution company" means. Motion is carrying meaning, which is the only defensible reason for it to exist.
+
+**Hard constraints:** do not modify the logo · do not add "360" to it · do not trace the PNG · do not hardcode five segments — the service registry drives the count.
 
 **What must be proven, not assumed:** that it reads as authored rather than as a stock brand reveal; that it survives 360 px; that step 6 works when there is nothing approved to reveal.
 
@@ -104,7 +110,7 @@ Rejected:
 | M-1 | Does the logo sequence play once per session, once per page load, or only on `/`? | Determines whether it delights or irritates on the second visit |
 | M-2 | Does the sequence gate the hero, or play over already-readable content? | Principle 3 says it must not gate. Prototype must show this is achievable |
 | M-3 | What is the sequence's total duration, and does it survive a returning visitor? | A 2-second opening is charming once and costly on the fifth visit |
-| M-4 | How does a radial segment expansion re-compose at 360 px? | The hardest constraint. Mobile is the majority case |
+| M-4 | How does an **orbital** segment layout re-compose at 360 px? | The hardest constraint. A full circle at 360 px width leaves very little radius — the mobile form may need to be an arc, a vertical rail, or a different metaphor entirely |
 | M-5 | What does "highly animated" mean below the fold? | The brief asks for ambition; the teardown warns against per-section reveals. This must be answered concretely, not by adjective |
 | M-6 | With no approved proof, what does a segment reveal on hover or tap? | Determines whether beat 6 is buildable today |
 | M-7 | What is the reduced-motion version of the assembly sequence? | Must lose no information — the mark and five services still legible and navigable |

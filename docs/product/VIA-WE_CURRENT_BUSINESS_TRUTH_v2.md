@@ -5,9 +5,11 @@
 **Owners:** Vamshi / Vijay  
 **Purpose:** Give developers and AI agents a precise, non-hallucinatory description of Via-We as it exists now, while preserving room for future expansion.
 
-> ### 🔒 Redaction notice — added 2026-08-01, not a content change by an agent
+> ### 🔒 Changes since the owner-supplied original — added 2026-08-01
 >
-> This file is **byte-identical to the owner-supplied original** except for this notice and the **three** redactions below, made on Vamshi's explicit pre-commit instruction.
+> This file is **byte-identical to the owner-supplied original** except for: this notice, the **three** redactions below, and the **Batch 01 addendum at §15** (appended, nothing above it altered).
+>
+> **§15 is newer than everything above it.** Where §15 and an earlier section disagree — brand name, tagline punctuation, leadership designation — **§15 wins**, because it carries later owner-supplied evidence.
 >
 > | Section | Redacted | Where the unredacted text lives |
 > |---|---|---|
@@ -567,3 +569,142 @@ Not ready now:
 - Full case-study publication
 - Final legal/contact footer
 - Production launch
+
+---
+
+# 15. Batch 01 addendum — company identity, contacts, brand
+
+**Appended 2026-08-01** from `private/intake/inbox/2026-08-01-company-legal-contact/` (Git-ignored).
+**Source:** direct owner-side statement by Vamshi, 1 August 2026. **No official document supplied.**
+**Authority:** this section is newer than §1–§14 and wins where they disagree.
+**Report:** [docs/reviews/2026-08-01-intake-batch-01-company-identity.md](../reviews/2026-08-01-intake-batch-01-company-identity.md)
+
+> **Nothing in this section is `PUBLIC-READY`.** Every item is `[VERIFY]` — supported by an owner statement, not by a document or Vijay's written approval. Source priority level 4 (internal current), not level 1 or 2.
+
+## 15.1 Public brand — RESOLVED
+
+**Vijay's final confirmation, relayed by Vamshi, 2026-08-01.** This supersedes the earlier Batch 01 statement that the public brand was "Via-We 360".
+
+| | |
+|---|---|
+| **Official brand name** | **VIA-WE Services Pvt. Ltd.** ✅ `PUBLIC-READY` |
+| **Exact logo wording** | `VIA-WE Services Pvt. Ltd.` / `YOUR DREAMS OUR AIM` ✅ `PUBLIC-READY` |
+| Legal registered name | `[VERIFY]` — exact registered spelling still needs the incorporation certificate (**K-5 remains open**) |
+| "360" in the name, wordmark, logo or tagline | **NO — never** |
+
+### Binding naming rule
+
+> **Do not rename the company.** The following are **wrong** and must never appear anywhere:
+> `Via-We 360` · `Via-We 360 Services Pvt. Ltd.` · `VIA-WE 360`
+
+**"360" is not part of** the legal company name, the public written brand name, the logo, the wordmark, or the tagline.
+
+**Distinction to preserve:** the *brand name* "VIA-WE Services Pvt. Ltd." is confirmed and matches the approved artwork. The *exact legal registered spelling* — "Private Limited" vs "Pvt. Ltd." — is a separate question still awaiting the incorporation certificate.
+
+## 15.1a The 360 concept — strategic, never a name
+
+**"360" is a strategic and visual idea, not a written brand name.** `[CONFIRMED]`
+
+It represents:
+
+- complete and connected business-service coverage
+- multiple services handled through one company
+- end-to-end business execution
+- services working together as one system
+- the ability to expand into additional service categories later
+
+**Positioning wording — approved pattern, `[PROPOSED]`:**
+
+> "Via-We is a 360-degree business execution company bringing branding, business setup, franchise solutions, technology and recruitment together through one connected system."
+
+> **This exact sentence is `[PROPOSED]`, not `PUBLIC-READY`.** The **concept** is confirmed; the **published wording** still requires final copy sign-off under `AGENTS.md` rule 1. Do not publish it as approved copy.
+
+**Guardrail.** Do **not** publicly claim Via-We performs literally every possible service. "360-degree" describes *connectedness and coverage across its five active services*, not omnicompetence.
+
+**The five active V1 services are unchanged** ([ADR-002](../decisions/ADR-002-v1-active-service-scope.md)): Digital Marketing & Branding · Business Setup · Franchise Solutions · Web & App Development · Hiring & Recruitment. The architecture must remain extensible for additional services later.
+
+## 15.2 Tagline — RESOLVED
+
+| | |
+|---|---|
+| **Exact tagline** | **`YOUR DREAMS OUR AIM`** ✅ `PUBLIC-READY` |
+| Comma | **None.** Never write "Your Dreams, Our Aim" |
+| Where it lives | Inside the approved logo lockup |
+| Logo artwork | **Preserve exactly.** Do not alter punctuation, casing or spacing |
+
+Confirmed by Vijay **and** independently corroborated by the supplied artwork, which reads `YOUR DREAMS OUR AIM`. Two sources agree. The earlier comma form is withdrawn.
+
+## 15.3 Contact details — supplied, values held privately
+
+Primary phone, secondary phone, WhatsApp and official email were all supplied.
+
+**The values are not reproduced here.** Public display is *"Confirmed by Vamshi; Vijay/document confirmation pending"* — i.e. **not yet approved for public use**, so under governance policy §10 and the ingestion prompt §1.3 they remain in `private/source-data/` and `private/intake/`.
+
+| Field | Supplied? | Public-display approval | Status |
+|---|:--:|---|---|
+| Primary phone | ✅ | Pending Vijay/document | `[VERIFY]` · `PRIVATE-ONLY` |
+| Secondary phone | ✅ | Pending Vijay/document | `[VERIFY]` · `PRIVATE-ONLY` |
+| Official WhatsApp | ✅ (same as primary phone) | Pending Vijay/document | `[VERIFY]` · `PRIVATE-ONLY` |
+| Official email | ✅ | Pending Vijay/document | `[VERIFY]` · `PRIVATE-ONLY` |
+| Website / domain | ❌ Not supplied | — | Open |
+| Business hours | ❌ Not supplied | — | Open |
+
+**Note on the secondary phone.** The number supplied as *secondary* matches the number that earlier documentation carried as the sole company phone, marked unverified. That earlier value was removed from all tracked files during the privacy pass. Batch 01 confirms it exists and demotes it to secondary — it does **not** verify it. See conflict K-3.
+
+## 15.4 Offices and branches
+
+| Location | Classification | Status |
+|---|---|---|
+| Vijayawada, Andhra Pradesh | `ACTIVE-OPERATING-OFFICE` **and** `REGISTERED-OFFICE` (same address, per Vamshi) | `[VERIFY]` — no document supplied |
+| Hyderabad | `UNVERIFIED` → **not active** | Must not be presented as an office |
+| Bengaluru | `UNVERIFIED` → **not active** | Must not be presented as an office |
+| Visakhapatnam | `UNVERIFIED` → **not active** | Must not be presented as an office |
+| Any other city | Not active unless a later intake confirms it | — |
+
+**Genuinely active operating cities: 1 (Vijayawada).**
+
+**The street address is not reproduced here.** It is supplied but unapproved for public display and carries four unverified spellings plus a missing PIN code — held in `private/intake/`.
+
+**Website publication rule.** V1 may say **"Based in Vijayawada"** only after Vijay confirms that exact wording. V1 must **not** say: multiple offices · pan-India network · a Hyderabad, Bengaluru or Vizag branch · "coming soon" locations.
+
+**Supersedes:** §13's open question on branches, and the earlier repository assumption that Hyderabad and Bengaluru were "planned expansion" — Batch 01 does not support presenting them at all.
+
+## 15.5 Leadership
+
+| | |
+|---|---|
+| Primary leadership and business contact | **Vijay Budati** `[VERIFY]` |
+| Official public designation | **NOT SUPPLIED** |
+| Additional leadership | None supplied |
+| Biography approved | No |
+| Photograph available / approved | Available per project intake / **not approved** |
+
+> **Do not assign any of these titles without Vijay's written confirmation or official evidence:** Founder · Co-Founder · Chief Executive Officer · Managing Director · Director · Marketing Director · Chairman.
+
+Until confirmed, internal documentation may describe him only as *"Primary Via-We leadership and business contact."* **This wording is internal and must not appear on the public website.**
+
+**Resolves a long-standing error.** Earlier repository documentation asserted "Vijay Budati — Founder & CEO" and a second individual as "Managing Director", both marked unverified. Batch 01 supplies **no designation for anyone** and names **no second person**. The earlier titles were unsupported and are withdrawn. See conflict K-4.
+
+**No `/team` route in V1** until title, biography and photograph approvals all exist.
+
+## 15.6 Still not supplied by Batch 01
+
+CIN · incorporation date · company status · registered-office proof · GST certificate · MCA master data · website/domain confirmation · business hours · PIN code · Google Maps link · office "active since" date · **all production logo vector files** · Deadhead Bold licence terms.
+
+## 15.7 Logo status — confirmed, but the vector blocker remains
+
+| Item | Status |
+|---|---|
+| Final official logo supplied | ✅ **YES** — as a raster reference |
+| Raster reference supplied | ✅ **YES** — `via-we logo name.png`, held in `private/` |
+| Logo design approved | ✅ **YES** — final, must remain unchanged |
+| Exact wording confirmed | ✅ **YES** — `VIA-WE Services Pvt. Ltd.` / `YOUR DREAMS OUR AIM` |
+| **Production editable vector supplied** | ❌ **NO** |
+| **Suitable for final separable-path animation** | ❌ **NO** |
+| **Vector / source-file blocker** | ⛔ **OPEN — B1 stands** |
+
+**The uploaded PNG is a valid official visual reference, not the editable production master.** The approved animation resolves around the unchanged logo and needs separable vector paths; a flattened bitmap cannot supply them.
+
+**"Services Pvt. Ltd." is intentionally part of the approved lockup** and may remain visible in the header. This was previously logged as a conflict; it is a deliberate design decision.
+
+**Do not** modify the logo, add "360" to it, redraw it, or trace the PNG. See the [brand asset audit](../brand/VIA-WE_BRAND_ASSET_AUDIT.md).

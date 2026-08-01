@@ -41,6 +41,23 @@
 
 Not only a digital-marketing agency. It coordinates parts of business execution normally split across separate vendors.
 
+### 3a. Naming — binding, do not deviate
+
+| | |
+|---|---|
+| **Official name, everywhere** | **VIA-WE Services Pvt. Ltd.** |
+| **Exact tagline** | **`YOUR DREAMS OUR AIM`** — **no comma**, ever |
+| **"360"** | A **strategic and visual concept only** |
+
+> **⛔ Never write `Via-We 360`, `VIA-WE 360`, or `Via-We 360 Services Pvt. Ltd.`**
+> "360" is **not** part of the legal name, the public brand name, the logo, the wordmark, or the tagline. It appears only as a concept in prose — "a 360-degree business execution company" — and visually, through motion.
+>
+> **Never claim Via-We performs literally every possible service.** "360-degree" means connected coverage across its five active services.
+>
+> **The logo is final and must remain unchanged.** Do not add "360" to it, redraw it, or trace the raster reference.
+
+The exact **legal registered** spelling ("Private Limited" vs "Pvt. Ltd.") is a separate open question pending the incorporation certificate — see [missing inputs](docs/planning/VIA-WE_MISSING_INPUTS.md).
+
 ---
 
 ## 4. Version 1 active services — five
