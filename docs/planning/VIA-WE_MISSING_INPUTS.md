@@ -10,21 +10,25 @@ created: 2026-08-01
 
 **Updated by:** the incremental data ingest process. When an input arrives, move it to Resolved (§5) with a date — do not delete the row.
 
+**Batch 01 processed 2026-08-01** — [report](../reviews/2026-08-01-intake-batch-01-company-identity.md). It supplied **owner statements, no documents**. Several blockers moved from *nothing supplied* to **partially supplied, verification pending**. **No blocker fully cleared.**
+
 ---
 
 ## 1. Hard blockers — nothing proceeds without these
 
 | # | Input | Owner | Blocks |
 |---|---|---|---|
-| **B1** | **Production logo vector files** — symbol SVG, full horizontal SVG, white, one-colour, wordmark, favicon, editable AI/EPS source, lockup with and without tagline, lockup without "Services Pvt. Ltd." | Vijay | **All creative prototyping.** A logo-led direction cannot be built from raster artwork, and governance policy §7 forbids treating raster as an official vector. **This is the single highest-value input in the project** |
-| **B2** | Deadhead Bold — licence terms and web-embedding permission | Vijay | The type system. If not licensable, a substitute display face must be chosen and approved — a brand decision, not a developer's |
-| **B3** | Final tagline decision — "Your Dreams Our Aim" or replacement | Vijay | Header, hero, footer, logo lockup, meta titles |
-| **B4** | Current legal company details — full legal name, CIN, incorporation date, registered office, operating office | Vijay | `/about`, footer, legal pages, **launch** |
-| **B5** | Current official phone, WhatsApp, email | Vijay | Every contact route on every page. The most-repeated fact on the site |
-| **B6** | Leadership names and titles | Vijay | `/about`. No `/team` route exists until this lands |
-| **B7** | Active vs planned branches | Vijay | Any location statement. Planned locations must be marked planned — never available |
+| **B1** | **Production logo vector files** — symbol SVG, full horizontal SVG, white, one-colour, wordmark, favicon, editable AI/EPS source, **plus a compact mobile variant** | Vijay | **All creative prototyping. STILL 0 of 7 vectors.** A **raster reference was supplied** on 2026-08-01 (`via-we logo name.png`) — valuable for confirming wording and composition, but it is not a master and cannot drive the logo-led animation, which needs separable paths. Batch 01 confirms the logo *design* is final, which is not the same as having production files. A logo-led direction cannot be built from raster artwork, and governance policy §7 forbids treating raster as an official vector. **Still the single highest-value input in the project.** See the [brand asset audit](../brand/VIA-WE_BRAND_ASSET_AUDIT.md) |
+| **B2** | Deadhead Bold — licence terms and web-embedding permission | Vijay | The type system. **Batch 01 asked and returned "Unknown" — not resolved.** If not licensable, a substitute display face must be chosen and approved — a brand decision, not a developer's. Also blocked by "website typography may be modernised: not confirmed" |
+| ~~**B3**~~ | ~~Final tagline decision~~ | — | ✅ **RESOLVED 2026-08-01** — `YOUR DREAMS OUR AIM`, no comma, inside the approved lockup. Moved to §5 |
+| **B4** | Current legal company details — full legal name, CIN, incorporation date, registered office, operating office | Vijay | `/about`, footer, legal pages, **launch**. **Batch 01 supplied a working legal name and a Vijayawada address; CIN, incorporation date and company status remain entirely absent.** Partially supplied |
+| **B5** | Current official phone, WhatsApp, email | Vijay | Every contact route on every page. **Batch 01 supplied all four values — but public display is unapproved, so they stay in `private/` and are unusable on the site.** Needs Vijay's public-display approval, not more values |
+| **B6** | Leadership names and titles | Vijay | `/about`. **Batch 01 supplied the name and explicitly supplied NO designation.** The earlier "Founder & CEO" claim is withdrawn (K-4). Needs the exact public designation, biography approval and photo approval. No `/team` route until then |
+| **B7** | Active vs planned branches | Vijay | **Largely answered: one active city, Vijayawada; Hyderabad/Bengaluru/Vizag not active and must not appear at all.** Needs document proof and approval of the exact public wording "Based in Vijayawada" |
 | **B8** | **Direct delivery vs partner coordination, per pillar** | Vijay | Honest service-page copy. Truth file §2.2 requires the distinction and it exists for no pillar |
 | **B9** | Creative approval — [ADR-004](../decisions/ADR-004-logo-led-extensible-service-motion.md) | Vijay | The build gate. Requires two prototypes first, which require B1 |
+| **B10** | **Resolve remaining conflicts K-3, K-4, K-5, K-6** — public phone roles, **Vijay's exact public designation**, exact legal registered spelling, registered office | Vijay + documents | `/about`, footer, contact. **K-1, K-2, K-7 and K-8 were resolved 2026-08-01** by Vijay's brand confirmation. **Four remain: K-3, K-4, K-5, K-6.** K-3 (which phone is public) and K-4 (Vijay's designation and whether a leadership section may publish) are **independent** and must not be merged. K-5 and K-6 need documents. See [evidence register §9](../product/VIA-WE_CONTENT_EVIDENCE_REGISTER.md) |
+| **B11** | **Public-display approval for contact details** | Vijay | Every contact route. Values exist but sit in `private/` because publication is unapproved. **This is an approval blocker, not a data blocker** |
 
 ---
 
@@ -90,6 +94,9 @@ created: 2026-08-01
 | No privacy boundary in the repository | 2026-08-01 | `private/` created and Git-ignored; redaction standard demonstrated in the [operations summary](../operations/VIA-WE_CLIENT_OPERATIONS_SUMMARY_REDACTED.md) |
 | **R5 — client names in tracked files** | 2026-08-01 | **Removed.** 11 occurrences across 3 files redacted to sector descriptions; unredacted originals moved to `private/source-data/`; control-verified zero remain. See [privacy review](../reviews/2026-08-01-pre-commit-privacy-review.md). *Residual risk carried forward as the new R5 in §4* |
 | Authority documents unverified against originals | 2026-08-01 | Originals located at `~/Downloads/VIA-WE_AGENT_DOCUMENTATION_UPDATE_PACK/`; all five diffed with **no substantive difference**; repo copies restored byte-exact |
+| **B3 — final tagline** | 2026-08-01 | ✅ **`YOUR DREAMS OUR AIM`**, no comma, inside the approved logo lockup. Confirmed by Vijay and corroborated by the artwork |
+| **Brand name** (conflicts K-1, K-7) | 2026-08-01 | ✅ **VIA-WE Services Pvt. Ltd.** "360" is a strategic concept, never a name. No 360 logo is expected |
+| **Legal suffix in the header** (K-8) | 2026-08-01 | ✅ Intentionally part of the lockup; may remain visible |
 
 ---
 

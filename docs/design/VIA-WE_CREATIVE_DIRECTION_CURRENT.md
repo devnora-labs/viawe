@@ -28,6 +28,23 @@ adr: docs/decisions/ADR-004-logo-led-extensible-service-motion.md
 
 **Five active pillars** ([ADR-002](../decisions/ADR-002-v1-active-service-scope.md)): Digital Marketing & Branding · Business Setup · Franchise Solutions · Web & App Development · Hiring & Recruitment.
 
+### Confirmed brand facts — 2026-08-01
+
+| | |
+|---|---|
+| **Official name, everywhere** | **VIA-WE Services Pvt. Ltd.** ✅ |
+| **Exact tagline** | **`YOUR DREAMS OUR AIM`** — no comma ✅ |
+| **"360"** | A **strategic and visual concept only.** Never in the name, logo, wordmark or tagline |
+| Legal suffix in the header | Intentionally part of the lockup; may remain visible |
+
+**Approved positioning pattern:**
+
+> "Via-We is a 360-degree business execution company bringing branding, business setup, franchise solutions, technology and recruitment together through one connected system."
+
+**Guardrail:** never claim Via-We performs literally every possible service. "360-degree" means *connected coverage across its five active services*, not omnicompetence.
+
+**Never write:** `Via-We 360` · `VIA-WE 360` · `Via-We 360 Services Pvt. Ltd.`
+
 ---
 
 ## 2. The design problem
@@ -35,7 +52,7 @@ adr: docs/decisions/ADR-004-logo-led-extensible-service-motion.md
 Not "make it look premium." Three concrete problems:
 
 1. **An unfamiliar category.** "Business Growth & Execution Company" is not a category a visitor arrives knowing. The site must explain it, not assert it.
-2. **Coordination is invisible.** Five services listed look like five services. The product is the *connection* between them, and a list cannot show a connection.
+2. **Coordination is invisible.** Five services listed look like five services. The product is the *connection* between them, and a list cannot show a connection. **This is precisely what the 360 concept must carry visually** — since it may never be written into the logo.
 3. **No approved proof yet.** No client logo, metric, testimonial, or case study is currently cleared for publication — see the [evidence register](../product/VIA-WE_CONTENT_EVIDENCE_REGISTER.md). The design must earn confidence without them, and must accommodate them gracefully as they arrive.
 
 Problem 3 is a timing constraint, not a permanent one. The design must work **today** with descriptions only, and get better as approved proof lands.
@@ -54,12 +71,12 @@ The Via-We logo is the source, because it already means the right things:
 
 **The sequence** (`docs/product/VIA-WE_CURRENT_BUSINESS_TRUTH_v2.md` §6):
 
-1. The two curves begin separated
-2. They enter from opposite sides
-3. The mesh connection resolves as they meet
-4. The full Via-We symbol forms
-5. The symbol expands into the **active service segments** — Brand & Market · Set Up · Franchise · Build Digital · Hire
-6. Each segment can reveal real work, people, campaigns, interfaces, or outcomes
+1. The official VIA-WE symbol **forms** from its existing curves and connection mesh
+2. A **complete circular / orbital motion** develops around the mark
+3. Active services appear as **connected segments** around the central system
+4. The segments **complete a full 360-degree journey**
+5. Each segment reveals real work, capabilities or outcomes
+6. The animation **resolves around the unchanged official logo**
 7. The system expands to six or seven services **without a redesign**
 
 **Why this is a better starting point than what it replaced:** it derives from an asset Via-We owns, with meaning the company authored, and the narrative *is* the positioning argument rather than a decoration of it.
@@ -114,7 +131,7 @@ Must be answered before or during the prototype phase.
 |---|---|---|---|
 | C-1 | Are the production logo vector files available? | **All prototyping.** A logo-led direction cannot be built from raster artwork | Vijay |
 | C-2 | Is Deadhead Bold licensed for web embedding? If not, which display face? | Type system | Vijay |
-| C-3 | Is "Your Dreams Our Aim" the final tagline, or is it retired? | Header, hero, footer, logo lockup | Vijay |
+| ~~C-3~~ | ~~Final tagline~~ | ✅ **RESOLVED 2026-08-01** — `YOUR DREAMS OUR AIM`, no comma | — |
 | C-4 | Does the logo sequence play on every route or only on `/`? | Motion scope, performance budget | Prototype |
 | C-5 | With no approved proof yet, what does a service segment reveal — a description, or nothing? | Whether step 6 of the sequence is buildable today | Prototype + evidence register |
 | C-6 | Is the site's confidence carried by the mark, or by the work? | Determines how much weight the opening sequence carries | Vijay + prototype |

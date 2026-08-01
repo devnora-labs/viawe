@@ -29,28 +29,39 @@ source: docs/product/VIA-WE_CURRENT_BUSINESS_TRUTH_v2.md
 | Downward curve | **WE** |
 | Mesh / network | The connection between Via-We and the client, and company expansion |
 
+**Confirmed brand facts (2026-08-01):** the official name is **VIA-WE Services Pvt. Ltd.**; the tagline is **`YOUR DREAMS OUR AIM`** with no comma; **"360" never appears in the logo, wordmark, name or tagline** — it is expressed visually through the orbital motion only.
+
 This is an unusually good starting point: the mark already encodes *growth*, *partnership*, and *connection* — which is precisely Via-We's positioning as a coordinated execution company. The direction under exploration derives the site's motion and visual system from the mark itself rather than from an invented metaphor.
 
 Simultaneously, [ADR-002](ADR-002-v1-active-service-scope.md) fixed V1 at five pillars while requiring that the count be changeable. The previous direction failed partly because its signature element encoded a fixed service count in its form.
 
 ---
 
-## 2. Proposed direction — "Connected Growth Mark"
+## 2. Proposed direction — "Connected Growth Mark", 360 orbital
+
+**Updated 2026-08-01** following Vijay's brand confirmation. The direction now carries the **360 concept visually**, which is exactly how "360" is permitted to appear — as a visual and strategic idea, **never as text in the logo**.
 
 The logo becomes the source of the motion system:
 
-1. The two major logo curves begin separated.
-2. They enter from opposite sides.
-3. The mesh connection resolves as they meet.
-4. The full Via-We symbol forms.
-5. The symbol expands into the **active service segments**:
-   - Brand & Market
-   - Set Up
-   - Franchise
-   - Build Digital
-   - Hire
-6. Each segment can reveal real Via-We work, people, campaigns, interfaces, or business outcomes.
-7. The system must expand later to six or seven active services **without redesigning the website**.
+1. The official **VIA-WE symbol forms** from its existing curves and connection mesh.
+2. A **complete circular or orbital motion** develops around the mark.
+3. The **active services appear as connected segments** around the central Via-We system.
+4. The segments **complete a full 360-degree journey**.
+5. Each service reveals real work, capabilities or outcomes.
+6. The system communicates that Via-We **coordinates multiple business needs through one connected execution company**.
+7. The animation **returns to or resolves around the unchanged official logo**.
+
+**Why the orbital form is now the right one.** "360" is a strategic concept, not a name — it must not be written into the logo. An orbital sequence that completes a full revolution around the unchanged mark expresses *complete, connected coverage* visually, without adding a single character to the artwork. The meaning and the constraint agree.
+
+### Absolute constraints
+
+- **Do not modify the logo.**
+- **Do not add "360" to the logo**, the wordmark, or the tagline.
+- **Do not redraw or trace the supplied PNG** in any documentation phase.
+- **Do not hardcode exactly five permanent segments.**
+- The **active service registry drives the number of segments** (§3).
+- Six- or seven-service expansion must not require rebuilding the architecture.
+- **Production-quality logo animation still requires editable vector paths** — the raster reference cannot supply them.
 
 **Status: [PROPOSED].** Requires prototypes, mobile review, reduced-motion review, and Vijay's approval.
 
@@ -63,7 +74,7 @@ The logo becomes the source of the motion system:
 ### Risks that the prototype must test
 
 - **A logo-assembly intro is a common agency pattern.** It risks reading as a generic "brand reveal" loader. `AGENTS.md` prohibits long intro loaders, and the sequence must not gate content.
-- **A radial segment expansion is a hub-and-spoke diagram** — the generic "connections" visual. Craft will decide whether it reads as authored or as clip art.
+- **A radial/orbital segment expansion is a hub-and-spoke diagram** — the generic "connections" visual. Craft will decide whether it reads as authored or as clip art. The 360 concept justifies the *form*; it does not excuse a weak execution of it.
 - **Five segments at 360 px** is the hardest constraint. A radial form that works on desktop frequently does not survive a narrow viewport, and mobile is the majority case.
 - **Content dependency.** Step 6 assumes real work, people, campaigns and outcomes exist to reveal. Almost none is currently approved for publication — see the [evidence register](../product/VIA-WE_CONTENT_EVIDENCE_REGISTER.md). **The direction must work with segments that reveal descriptions rather than proof**, or it cannot ship.
 
