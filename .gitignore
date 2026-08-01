@@ -1,0 +1,23 @@
+# Via-We private business information
+private/
+docs/source-data/raw/
+
+# Local/generated agent files
+ruvector.db
+.impeccable/
+
+# macOS
+.DS_Store
+
+# Node (for future application phases — no app exists yet)
+node_modules/
+.next/
+dist/
+build/
+coverage/
+.turbo/
+out/
+*.log
+.env
+.env.*
+!.env.example
