@@ -6,6 +6,23 @@ Application changes are not recorded here — there is no application.
 
 ---
 
+## 2026-08-02 — Brand-source discovery: Figma vector lead
+
+**Report:** [docs/reviews/2026-08-01-brand-source-discovery.md](docs/reviews/2026-08-01-brand-source-discovery.md) · **Branch:** `docs/viawe-figma-vector-source-lead`
+
+- **Symbol-only raster reference** added privately — `via-we-symbol-reference.png`, 5773 × 4329, **RGB with no alpha** (baked background, so unusable over dark surfaces even as a reference asset)
+- **🔍 Figma vector-source lead.** A Figma-produced Via-We PDF was found with **10,664 vector path operations**. It **proves Via-We design work passed through Figma** — it does **not** prove the logo exists there as editable vector, that the paths in that file are the logo's, that the project is still accessible, or that B1 is close to resolution. **Recorded as a lead, not a master**
+- **Correction on the record:** an earlier verbal summary called this "one export away". That overstated it and is retracted in the review
+- **Recovery strategy revised** — Figma first: find the owner → confirm editable layers → export and validate SVGs. **A commissioned redraw is now the fallback, not the first recommendation**
+- **`VIA WE BRAND GUIDELINES.pdf` contains no vector** — 9 pages of placed JPEGs, 0 vector operations. Explains why its colours only ever existed as stated hex codes
+- **Rejected:** five navy/orange `Artboard 1*.svg` files belong to **another brand** (`#0a213e` / `#faa41a`, zero gradients) and must never be treated as Via-We artwork
+- **B1 remains OPEN.** Reference coverage improved; production readiness did not
+
+Changed: brand asset audit · missing inputs · evidence register · truth file §15.7 · new discovery review · changelog.
+**Not changed:** `AGENTS.md`, `PRODUCT.md`, ADR-004, motion direction — no binding rule or approved concept changed.
+
+---
+
 ## 2026-08-01 — Brand concept resolution (Vijay confirmed)
 
 Vijay's final clarification, relayed by Vamshi. **Four conflicts resolved (K-1, K-2, K-7, K-8); four facts reached `PUBLIC-READY`, taking the register total from 5 to 9.**
