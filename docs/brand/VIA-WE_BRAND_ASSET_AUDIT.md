@@ -25,7 +25,9 @@ last_batch: 2026-08-01-company-legal-contact
 | | |
 |---|---|
 | Final official logo supplied | ✅ **YES** — as a raster reference |
-| Raster reference supplied | ✅ **YES** — `via-we logo name.png`, 3281 × 1875, RGBA |
+| Raster reference — full lockup | ✅ **YES** — `via-we logo name.png`, 3281 × 1875, RGBA (alpha) |
+| **Raster reference — symbol only** | ✅ **YES** — `via-we-symbol-reference.png`, 5773 × 4329, **RGB, no alpha** |
+| **Editable vector source** | 🔍 **LEAD ONLY** — Figma, unconfirmed. See [discovery review](../reviews/2026-08-01-brand-source-discovery.md) |
 | Logo design approved | ✅ **YES** — final, must remain unchanged |
 | Exact wording confirmed | ✅ **YES** — `VIA-WE Services Pvt. Ltd.` / `YOUR DREAMS OUR AIM` |
 | **Production editable vector supplied** | ❌ **NO** |
@@ -102,9 +104,31 @@ Two raster files are now known: `via-we logo name.png` in the batch (§2a), and 
 
 **Tracing the raster to fake a vector is explicitly prohibited** by the ingestion prompt §1.4 and would silently alter the approved mark.
 
-### If no vector exists anywhere
+### Recovery strategy — Figma first, redraw as fallback
 
-That is itself the finding, and it changes the plan rather than blocking it indefinitely: the mark must be **redrawn from the guideline by a designer**, as a separately commissioned task with its own timeline and its own approval. Better established now than discovered at prototype.
+**Revised 2026-08-02** following the [brand-source discovery review](../reviews/2026-08-01-brand-source-discovery.md).
+
+A Figma-produced Via-We PDF was found (10,664 vector path operations, Producer `Figma`). **This proves Via-We design work passed through Figma. It does not prove the logo exists there as editable vector.**
+
+**Preferred recovery order:**
+
+1. **Identify who owns or can access the original Via-We Figma project** — the single next action
+2. **Confirm the logo exists there as editable vector layers** — not a placed PNG inside Figma, which would export as raster
+3. **Export production assets from Figma** — symbol · full horizontal · white/reversed · one-colour · **compact mobile** · favicon · editable source or documented component reference
+4. **Validate every SVG** — genuine paths, no embedded raster, transparency where required, correct colours and wording, exact tagline `YOUR DREAMS OUR AIM`, **no "360" added**, curves and mesh separable for animation, no unresolved font dependency
+5. **Fallback only** — if the Figma source cannot be recovered, commission a professional vector reconstruction as a separate task with its own timeline, cost and approval
+
+> **The redraw is now the fallback, not the first recommendation.** It was the first recommendation only while no vector source was believed to exist anywhere.
+
+### Rejected — navy/orange SVGs are another brand
+
+Five vector SVGs (`Artboard 1*.svg`) found during the search use **navy `#0a213e` and orange `#faa41a`** with **zero gradients** and generic ids. The Via-We palette is **all blues** and the mark uses gradients. **These belong to a different brand and must never be treated as Via-We artwork, imported, adapted or recoloured.**
+
+**No `.ai`, `.eps` or Via-We `.svg` exists anywhere on the searched filesystem.**
+
+### The brand guideline PDF contains no vector either
+
+`VIA WE BRAND GUIDELINES.pdf` is **9 pages of placed JPEGs — 0 vector operations, 0 font objects.** The guideline is itself a raster export, which is why its colour values have only ever been available as stated hex codes rather than sampled from artwork.
 
 ---
 

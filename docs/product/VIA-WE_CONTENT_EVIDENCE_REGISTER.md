@@ -156,7 +156,11 @@ All at `IDENTIFIED`. None has permission. None is publishable.
 | 43 | Deadhead Bold display face | **BLOCKED for web** | Licence and web-delivery suitability unverified |
 | 44 | Roboto Medium supporting face | `[CLIENT-SOURCE]` | Usable |
 | 45 | **Production logo vector files** | **MISSING** | **Hard blocker on all creative prototyping.** Never treat raster artwork as an official vector |
-| 45a | Logo raster reference | `RASTER-REFERENCE` | Supplied 2026-08-01, held in `private/`. Confirms wording, composition and palette. **Does not clear blocker B1** |
+| 45a | Logo raster reference — **full lockup** | `RASTER-REFERENCE` | Supplied 2026-08-01, held in `private/`. Confirms wording, composition and palette. **Does not clear B1** |
+| 45e | Logo raster reference — **symbol only** | `RASTER-REFERENCE` | Supplied 2026-08-02, held in `private/`. 5773 × 4329, **RGB with no alpha** — baked background, so unusable over dark surfaces even as a reference asset. **Does not clear B1** |
+| 45f | **Editable vector source** | **MISSING** — 🔍 **LEAD ONLY** | A Figma-produced Via-We PDF exists (10,664 vector path ops). **Proves design work passed through Figma; does NOT prove the logo is editable vector there, that the project is accessible, or that B1 is near resolution.** See [discovery review](../reviews/2026-08-01-brand-source-discovery.md) |
+| 45g | Navy/orange `Artboard 1*.svg` files | **REJECTED — not Via-We** | Fills `#0a213e` / `#faa41a`, zero gradients, generic ids. Via-We's palette is all blues and the mark uses gradients. **Another brand. Never import, adapt or recolour** |
+| 45h | `VIA WE BRAND GUIDELINES.pdf` | `RASTER-REFERENCE` | 9 pages of placed JPEGs, **0 vector operations**. The guideline is itself a raster export — which is why its colours exist only as stated hex codes |
 | 45b | **Exact approved logo wording** — `VIA-WE Services Pvt. Ltd.` / `YOUR DREAMS OUR AIM` | **PUBLIC-READY** | Confirmed by Vijay + artwork. **The absence of "360" is intentional** — K-7 resolved; tagline has no comma — K-2 resolved |
 | 45d | "Services Pvt. Ltd." is intentionally in the lockup and may show in the header | **PUBLIC-READY** | Vijay's confirmation — K-8 resolved |
 | 46 | Office / team / client photography | **MISSING** | No approved photography exists. **No AI-generated imagery** |

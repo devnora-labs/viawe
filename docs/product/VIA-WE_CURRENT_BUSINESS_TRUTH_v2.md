@@ -696,7 +696,8 @@ CIN · incorporation date · company status · registered-office proof · GST ce
 | Item | Status |
 |---|---|
 | Final official logo supplied | ✅ **YES** — as a raster reference |
-| Raster reference supplied | ✅ **YES** — `via-we logo name.png`, held in `private/` |
+| Raster reference — full lockup | ✅ **YES** — `via-we logo name.png`, held in `private/` |
+| **Raster reference — symbol only** | ✅ **YES** — `via-we-symbol-reference.png`, held in `private/` (added 2026-08-02) |
 | Logo design approved | ✅ **YES** — final, must remain unchanged |
 | Exact wording confirmed | ✅ **YES** — `VIA-WE Services Pvt. Ltd.` / `YOUR DREAMS OUR AIM` |
 | **Production editable vector supplied** | ❌ **NO** |
@@ -707,4 +708,6 @@ CIN · incorporation date · company status · registered-office proof · GST ce
 
 **"Services Pvt. Ltd." is intentionally part of the approved lockup** and may remain visible in the header. This was previously logged as a conflict; it is a deliberate design decision.
 
-**Do not** modify the logo, add "360" to it, redraw it, or trace the PNG. See the [brand asset audit](../brand/VIA-WE_BRAND_ASSET_AUDIT.md).
+**🔍 Vector-source lead — Figma.** A Figma-produced Via-We PDF exists, containing substantial vector geometry. It **proves Via-We design work passed through Figma**; it does **not** prove the logo is editable vector there, nor that the project is still accessible. **B1 stays open.** Preferred recovery is now: find the Figma owner → confirm editable layers → export and validate SVGs → commission a redraw **only as a fallback**. See the [brand-source discovery review](../reviews/2026-08-01-brand-source-discovery.md).
+
+**Do not** modify the logo, add "360" to it, redraw it, or trace either PNG. See the [brand asset audit](../brand/VIA-WE_BRAND_ASSET_AUDIT.md).
