@@ -1,6 +1,15 @@
+---
+status: current
+type: governance policy
+authority: 1
+created: 2026-08-01
+---
+
 # VIA-WE DOCUMENT AUTHORITY & CHANGE POLICY
 
 **Purpose:** Prevent developers and AI agents from hallucinating, silently overwriting decisions, or treating historical material as current truth.
+
+> **This document is ACTIVE and is authority level 1.** Its status is declared in the opening frontmatter above and nowhere else. The `status: superseded` line in §4 is a **template shown to authors** — it describes other documents, never this one. See [VIA-WE_VALIDATION_METHODOLOGY.md](VIA-WE_VALIDATION_METHODOLOGY.md) §5–§6.
 
 ---
 
@@ -73,6 +82,14 @@ superseded_by: docs/product/VIA-WE_CURRENT_BUSINESS_TRUTH_v2.md
 superseded_on: 2026-08-01
 reason: Version 1 service scope and creative direction changed
 ```
+
+**The block above is an example for authors. It is not this document's status.** A document's status is read only from its opening frontmatter block — never by searching a whole file for `status:`. Use `python3 scripts/audit-document-frontmatter.py`.
+
+### Canonical status values
+
+`current` · `accepted` · `proposed` · `superseded` · `historical`
+
+`current` and `accepted` are the **ACTIVE** lifecycle. Do not invent new status values.
 
 ---
 
