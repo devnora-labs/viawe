@@ -1,0 +1,218 @@
+/*
+ * VIA-WE Services Pvt. Ltd. — design tokens
+ * ==========================================
+ *
+ * Single source of truth for colour, type, space, elevation and motion.
+ *
+ * BINDING RULES (docs/design/VIA-WE_CURRENT_CRAFT_FLOOR.md):
+ *   - No component may write a raw hex value. Use a token.
+ *   - No gradient text, no gradient headline, no gradient wordmark (§4).
+ *     The approved official logo artwork is exempt and is rendered unchanged
+ *     from the supplied asset — it is never re-created in CSS.
+ *   - One elevation system. Border OR shadow on a surface, never both (§5).
+ *   - No glassmorphism, no backdrop blur, no floating blurred panels (§5).
+ *   - Body copy stays on a controlled measure, ~60–75 characters (§1).
+ *   - Display sizes are capped per breakpoint via responsive tokens,
+ *     never one hardcoded desktop value (§2).
+ *
+ * OPEN BLOCKERS THAT TOUCH THIS FILE:
+ *   B2  Display typeface — UNRESOLVED. See --vw-font-display below.
+ *   T7  Working palette derivation — the four brand blues are confirmed;
+ *       everything derived from them here is PROVISIONAL until Vijay and
+ *       Vamshi sign off (docs/planning/VIA-WE_MISSING_INPUTS.md).
+ */
+
+:root {
+  /* ---------------------------------------------------------------
+   * 1. BRAND ANCHORS — FIXED
+   *
+   * The four official guideline colours, exactly as stated in
+   * docs/product/VIA-WE_CURRENT_BUSINESS_TRUTH_v2.md §5.
+   *
+   * These are the ONLY Via-We brand colours. Do not add a fifth, and do
+   * not "modernise" these. The stated hex values are more authoritative
+   * than any sample taken from the raster guideline.
+   * --------------------------------------------------------------- */
+  --vw-brand-deep: #1b4b77;
+  --vw-brand-mid: #3582ad;
+  --vw-brand-core: #3b8ec0;
+  --vw-brand-bright: #4ad3f3;
+
+  /* ---------------------------------------------------------------
+   * 2. NEUTRALS — DERIVED, PROVISIONAL (T7)
+   *
+   * Derived from the brand hue (#1b4b77 ≈ hue 210°) at low saturation, so
+   * the neutral ramp belongs to the same family as the brand rather than
+   * being an unrelated grey. This is a derivation, NOT a new brand colour.
+   *
+   * Every foreground/background pairing used in the UI has a measured
+   * contrast ratio — see src/styles/CONTRAST.md.
+   * --------------------------------------------------------------- */
+  --vw-neutral-0: #ffffff;
+  --vw-neutral-50: hsl(210 24% 98%);
+  --vw-neutral-100: hsl(210 20% 95%);
+  --vw-neutral-200: hsl(210 18% 90%);
+  --vw-neutral-300: hsl(210 15% 82%);
+  --vw-neutral-400: hsl(210 13% 66%);
+  --vw-neutral-500: hsl(210 12% 50%);
+  --vw-neutral-600: hsl(210 14% 40%);
+  --vw-neutral-700: hsl(210 18% 30%);
+  --vw-neutral-800: hsl(210 24% 19%);
+  --vw-neutral-900: hsl(210 32% 11%);
+
+  /* ---------------------------------------------------------------
+   * 3. SEMANTIC SURFACES AND TEXT
+   * Components use these, never the ramps above.
+   * --------------------------------------------------------------- */
+  --vw-surface-page: var(--vw-neutral-0);
+  --vw-surface-raised: var(--vw-neutral-0);
+  --vw-surface-sunken: var(--vw-neutral-50);
+  --vw-surface-inverse: var(--vw-neutral-900);
+
+  --vw-text-primary: var(--vw-neutral-900);
+  --vw-text-secondary: var(--vw-neutral-700);
+  --vw-text-muted: var(--vw-neutral-600);
+  --vw-text-on-inverse: var(--vw-neutral-0);
+  --vw-text-on-brand: var(--vw-neutral-0);
+  --vw-text-link: var(--vw-brand-deep);
+
+  --vw-border-subtle: var(--vw-neutral-200);
+  --vw-border-strong: var(--vw-neutral-300);
+
+  /* Focus must be visible against every surface it can land on. */
+  --vw-focus-ring: var(--vw-brand-deep);
+  --vw-focus-ring-offset: var(--vw-surface-page);
+  --vw-focus-ring-width: 3px;
+  --vw-focus-ring-offset-width: 2px;
+
+  /* State colours are NOT yet derived — T7. Deliberately absent rather
+   * than invented. Add them when the palette is approved. */
+
+  /* ---------------------------------------------------------------
+   * 4. TYPOGRAPHY
+   *
+   * ⚠ B2 IS UNRESOLVED — THE DISPLAY FACE IS TEMPORARY.
+   *
+   *   - Deadhead Bold is the guideline display face. Its web licence is
+   *     UNKNOWN and it must NOT be installed, embedded or referenced.
+   *   - "Website typography may be modernised" is NOT CONFIRMED, so no
+   *     substitute display face may be chosen either.
+   *   - Roboto is the guideline's supporting face and is open-licensed,
+   *     so it stands in for the display role during structural
+   *     development ONLY.
+   *
+   * THIS IS NOT THE FINAL VIA-WE DISPLAY TYPOGRAPHY AND MUST NEVER BE
+   * PRESENTED AS SUCH. It exists so layout and hierarchy can be built.
+   *
+   * When B2 resolves, change --vw-font-display alone. No component,
+   * no section and no page needs to change.
+   * --------------------------------------------------------------- */
+  --vw-font-interim-display: var(--vw-font-roboto), system-ui, sans-serif;
+
+  --vw-font-display: var(--vw-font-interim-display); /* ⚠ TEMPORARY — B2 */
+  --vw-font-body: var(--vw-font-roboto), system-ui, sans-serif;
+  --vw-font-utility: ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Display scale — every step is capped per breakpoint by clamp().
+   * The third clamp argument IS the documented ceiling (craft floor §2). */
+  --vw-display-1: clamp(2.125rem, 1.45rem + 3.4vw, 4rem);
+  --vw-display-2: clamp(1.75rem, 1.28rem + 2.35vw, 3rem);
+  --vw-display-3: clamp(1.4rem, 1.15rem + 1.25vw, 2.125rem);
+
+  --vw-text-lead: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  --vw-text-base: 1rem;
+  --vw-text-small: 0.875rem;
+  --vw-text-tiny: 0.78125rem;
+
+  --vw-leading-tight: 1.1;
+  --vw-leading-snug: 1.28;
+  --vw-leading-body: 1.6;
+
+  --vw-tracking-tight: -0.02em;
+  --vw-tracking-normal: 0;
+  --vw-tracking-wide: 0.06em;
+
+  --vw-weight-regular: 400;
+  --vw-weight-medium: 500;
+  --vw-weight-bold: 700;
+
+  /* ---------------------------------------------------------------
+   * 5. SPACE AND MEASURE
+   * --------------------------------------------------------------- */
+  --vw-space-3xs: 0.25rem;
+  --vw-space-2xs: 0.5rem;
+  --vw-space-xs: 0.75rem;
+  --vw-space-sm: 1rem;
+  --vw-space-md: 1.5rem;
+  --vw-space-lg: 2.5rem;
+  --vw-space-xl: 4rem;
+  --vw-space-2xl: 6rem;
+  --vw-space-3xl: 8rem;
+
+  /* Craft floor §1 — a controlled measure, not the full viewport.
+   * Not every block uses the same one; uniform measure is its own
+   * template signal. */
+  --vw-measure: 68ch;
+  --vw-measure-narrow: 46ch;
+  --vw-measure-wide: 80ch;
+
+  --vw-container-max: 78rem;
+  --vw-container-pad: clamp(1.25rem, 0.9rem + 1.75vw, 3rem);
+
+  --vw-radius-sm: 2px;
+  --vw-radius-md: 4px;
+  /* Deliberately no large radius token. Craft floor §7 prohibits
+   * `rounded-2xl` on every surface. */
+
+  /* ---------------------------------------------------------------
+   * 6. ELEVATION — ONE SYSTEM
+   *
+   * Craft floor §5: prefer a single declaration per surface — border OR
+   * shadow, never both. Shadow means "genuinely raised or interactive".
+   * Flat delineation uses --vw-border-subtle instead.
+   * No glassmorphism. No backdrop-filter. No competing shadow styles.
+   * --------------------------------------------------------------- */
+  --vw-elevation-0: none;
+  --vw-elevation-1: 0 1px 2px hsl(210 32% 11% / 0.06);
+  --vw-elevation-2: 0 4px 12px hsl(210 32% 11% / 0.08);
+
+  /* ---------------------------------------------------------------
+   * 7. MOTION
+   *
+   * PLACEHOLDERS. Craft floor §11.1 requires the real motion tokens to be
+   * RE-DERIVED from an approved prototype, not inherited from the
+   * superseded motion system. Nothing here describes the signature
+   * animation, which does not exist and is gated on ADR-004 approval.
+   *
+   * The animation stack is deferred (T5). No animation library is
+   * installed. These tokens drive CSS transitions only.
+   * --------------------------------------------------------------- */
+  --vw-duration-feedback: 80ms; /* interaction acknowledgement */
+  --vw-duration-quick: 180ms;
+  --vw-duration-base: 320ms;
+  --vw-duration-slow: 560ms;
+
+  --vw-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --vw-ease-entrance: cubic-bezier(0, 0, 0, 1);
+  --vw-ease-exit: cubic-bezier(0.3, 0, 1, 1);
+}
+
+/*
+ * REDUCED MOTION
+ *
+ * Craft floor §6: reduced motion must PRESERVE information and
+ * composition. A blanket `* { animation-duration: 0.01ms }` kill is
+ * explicitly prohibited — it destroys useful interaction feedback.
+ *
+ * So: decorative durations collapse, but --vw-duration-feedback is kept
+ * so focus, hover and press states still acknowledge the user. Content
+ * order, composition and every CTA remain unchanged.
+ */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --vw-duration-quick: 1ms;
+    --vw-duration-base: 1ms;
+    --vw-duration-slow: 1ms;
+    /* --vw-duration-feedback intentionally NOT reduced. */
+  }
+}
