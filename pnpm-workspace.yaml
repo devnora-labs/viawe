@@ -1,0 +1,16 @@
+# pnpm settings for the Via-We website.
+#
+# Native post-install build scripts are DENIED by default — pnpm refuses to
+# run them unless a package is explicitly allowed here. That default is worth
+# keeping: an arbitrary post-install script is a classic supply-chain foothold.
+#
+# Neither package below is a new dependency. Both arrive transitively from
+# packages already approved in docs/planning/VIA-WE_WEBSITE_IMPLEMENTATION_PLAN.md §1:
+#
+#   sharp          native image processing used by Next.js image optimisation
+#   unrs-resolver  native module resolver used by the ESLint import plugin
+#
+# Do not add an entry without recording why it is needed.
+allowBuilds:
+  sharp: true
+  unrs-resolver: true

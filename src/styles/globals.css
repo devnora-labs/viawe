@@ -1,0 +1,163 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+/*
+ * Expose the design tokens to Tailwind utilities so components can use
+ * `text-vw-primary`, `bg-vw-page` etc. without ever writing a raw value.
+ */
+@theme inline {
+  --color-vw-brand-deep: var(--vw-brand-deep);
+  --color-vw-brand-mid: var(--vw-brand-mid);
+  --color-vw-brand-core: var(--vw-brand-core);
+  --color-vw-brand-bright: var(--vw-brand-bright);
+
+  --color-vw-page: var(--vw-surface-page);
+  --color-vw-raised: var(--vw-surface-raised);
+  --color-vw-sunken: var(--vw-surface-sunken);
+  --color-vw-inverse: var(--vw-surface-inverse);
+
+  --color-vw-primary: var(--vw-text-primary);
+  --color-vw-secondary: var(--vw-text-secondary);
+  --color-vw-muted: var(--vw-text-muted);
+  --color-vw-on-inverse: var(--vw-text-on-inverse);
+
+  --color-vw-border: var(--vw-border-subtle);
+  --color-vw-border-strong: var(--vw-border-strong);
+
+  --font-display: var(--vw-font-display);
+  --font-body: var(--vw-font-body);
+  --font-utility: var(--vw-font-utility);
+}
+
+/* ------------------------------------------------------------------
+ * Base
+ * ------------------------------------------------------------------ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* No smooth-scroll library, and no CSS smooth scroll either: it is a
+   * scroll behaviour change the user did not ask for. Craft floor §6. */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--vw-surface-page);
+  color: var(--vw-text-primary);
+  font-family: var(--vw-font-body);
+  font-size: var(--vw-text-base);
+  line-height: var(--vw-leading-body);
+  font-weight: var(--vw-weight-regular);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--vw-font-display);
+  font-weight: var(--vw-weight-bold);
+  line-height: var(--vw-leading-tight);
+  letter-spacing: var(--vw-tracking-tight);
+  margin: 0;
+  /* Long headings must not run the full viewport width. */
+  max-width: var(--vw-measure-narrow);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--vw-display-1);
+}
+h2 {
+  font-size: var(--vw-display-2);
+}
+h3 {
+  font-size: var(--vw-display-3);
+  line-height: var(--vw-leading-snug);
+}
+
+p {
+  margin: 0;
+  max-width: var(--vw-measure);
+  text-wrap: pretty;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--vw-text-link);
+  text-underline-offset: 0.2em;
+  transition: color var(--vw-duration-feedback) var(--vw-ease-standard);
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------------------------------------------------------------------
+ * Focus — visible on every surface, never removed
+ * ------------------------------------------------------------------ */
+
+:focus-visible {
+  outline: var(--vw-focus-ring-width) solid var(--vw-focus-ring);
+  outline-offset: var(--vw-focus-ring-offset-width);
+  border-radius: var(--vw-radius-sm);
+}
+
+/* Only suppress the ring for pointer input, never for keyboard. */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ------------------------------------------------------------------
+ * Layout primitives
+ * ------------------------------------------------------------------ */
+
+.vw-container {
+  width: 100%;
+  max-width: var(--vw-container-max);
+  margin-inline: auto;
+  padding-inline: var(--vw-container-pad);
+}
+
+.vw-skip-link {
+  position: absolute;
+  left: var(--vw-space-sm);
+  top: var(--vw-space-sm);
+  z-index: 100;
+  transform: translateY(-200%);
+  background-color: var(--vw-surface-page);
+  color: var(--vw-text-primary);
+  padding: var(--vw-space-2xs) var(--vw-space-sm);
+  border: 1px solid var(--vw-border-strong);
+  font-weight: var(--vw-weight-medium);
+  transition: transform var(--vw-duration-feedback) var(--vw-ease-standard);
+}
+
+.vw-skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+/* Utility/eyebrow label.
+ * Craft floor §3: this class exists for labels that carry real category,
+ * status, sequence or data meaning. It is NOT a decorative device and
+ * must not be placed above every heading. */
+.vw-label {
+  font-family: var(--vw-font-utility);
+  font-size: var(--vw-text-tiny);
+  letter-spacing: var(--vw-tracking-wide);
+  text-transform: uppercase;
+  color: var(--vw-text-muted);
+}
