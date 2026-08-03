@@ -50,6 +50,12 @@ Currently superseded and **never to be revived**:
 
 If a superseded document contains something genuinely useful, cite it as history and say so explicitly. Do not quote it as current.
 
+**The craft rules from `VIA-WE_CREATIVE_DIRECTION_v1.md` §11 have already been promoted** into [docs/design/VIA-WE_CURRENT_CRAFT_FLOOR.md](docs/design/VIA-WE_CURRENT_CRAFT_FLOOR.md). Read that. Do not go back to the superseded file for them, and do not treat a vendored skill as project truth on its own.
+
+**Never classify a document's status by grepping `^status:`.** The active governance policy declares `status: current`, `authority: 1` in its opening frontmatter, and **also** carries a sample YAML block in its body. A whole-file grep therefore returns two conflicting lines, and `grep '^status: superseded'` still matches the **active, authority-level-1** policy. Status comes only from opening frontmatter. Use `python3 scripts/audit-document-frontmatter.py`, which reports `current` → **ACTIVE**, **LEVEL 1**, body mentions ignored.
+
+**Never report a scan result of zero without a proven positive control.** Four scans on this project returned false clean results; one let real PII reach a commit. Use `python3 scripts/controlled_repo_scan.py`. See [docs/governance/VIA-WE_VALIDATION_METHODOLOGY.md](docs/governance/VIA-WE_VALIDATION_METHODOLOGY.md).
+
 ---
 
 ## 4. Use repository-local skills

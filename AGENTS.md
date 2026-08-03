@@ -16,10 +16,18 @@
 | 4 | Accepted ADRs in [docs/decisions/](docs/decisions/) |
 | 5 | [PRODUCT.md](PRODUCT.md) |
 | 6 | [Current creative direction](docs/design/VIA-WE_CREATIVE_DIRECTION_CURRENT.md) · [current motion direction](docs/design/VIA-WE_MOTION_DIRECTION_CURRENT.md) |
-| 7 | [Evidence register](docs/product/VIA-WE_CONTENT_EVIDENCE_REGISTER.md) |
-| 8 | [Missing inputs](docs/planning/VIA-WE_MISSING_INPUTS.md) |
-| 9 | [Redacted operations summary](docs/operations/VIA-WE_CLIENT_OPERATIONS_SUMMARY_REDACTED.md) |
-| 10 | The repository-local skill for the active task — read by exact path under `.agents/skills/` |
+| 7 | **[Current craft floor](docs/design/VIA-WE_CURRENT_CRAFT_FLOOR.md)** — required before any design or UI work |
+| 8 | **[Service registry contract](docs/architecture/VIA-WE_SERVICE_REGISTRY_CONTRACT.md)** — required before any route, nav item or animation segment |
+| 9 | [Evidence register](docs/product/VIA-WE_CONTENT_EVIDENCE_REGISTER.md) |
+| 10 | [Missing inputs](docs/planning/VIA-WE_MISSING_INPUTS.md) |
+| 11 | [Redacted operations summary](docs/operations/VIA-WE_CLIENT_OPERATIONS_SUMMARY_REDACTED.md) |
+| 12 | The repository-local skill for the active task — read by exact path under `.agents/skills/` |
+
+### Two rules that prevent recurring mistakes
+
+**Never build from `docs/design/VIA-WE_CREATIVE_DIRECTION_v1.md`.** It is superseded. Its still-valid craft rules were promoted into the [current craft floor](docs/design/VIA-WE_CURRENT_CRAFT_FLOOR.md); read that instead. A vendored skill is **not** project truth on its own.
+
+**Never classify a document's status by grepping `^status:`.** The active governance policy declares `status: current`, `authority: 1` in its opening frontmatter **and** carries a sample YAML block in its body — so a whole-file grep returns two conflicting lines, and `grep '^status: superseded'` still matches the **active** policy. Status comes only from opening frontmatter — use `python3 scripts/audit-document-frontmatter.py`. See [validation methodology](docs/governance/VIA-WE_VALIDATION_METHODOLOGY.md).
 
 ---
 
