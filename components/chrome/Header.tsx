@@ -188,7 +188,12 @@ export function Header() {
                 <a href={`tel:${site.phone.replace(/ /g, "")}`} className="link">
                   {site.phone}
                 </a>
-                <a href={site.whatsapp} className="link">
+                <a
+                  href={site.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link"
+                >
                   WhatsApp
                 </a>
                 <a href={`mailto:${site.email}`} className="link">
