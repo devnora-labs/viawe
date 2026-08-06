@@ -1,8 +1,10 @@
 import Image from "next/image";
+import { cta } from "@/content/copy";
 import { site } from "@/content/site";
 import { shots } from "@/content/media";
 import { Parallax } from "@/components/motion/Parallax";
 import { Reveal } from "@/components/motion/Reveal";
+import { Rise } from "@/components/motion/Rise";
 import { Words } from "@/components/motion/Words";
 import { Button } from "@/components/ui/Button";
 
@@ -21,10 +23,14 @@ export function Contact() {
         </Parallax>
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/20" />
+      <div className="absolute inset-0 bg-linear-to-r from-ink via-ink/70 to-ink/20" />
 
       <div className="shell relative py-40">
-        <h2 className="display title max-w-5xl">
+        <Rise>
+          <p className="label text-spark">{site.tagline}</p>
+        </Rise>
+
+        <h2 className="display title mt-10 max-w-5xl">
           <Reveal>Tell us where you</Reveal>
           <Reveal delay={0.08}>want to go next.</Reveal>
         </h2>
@@ -35,9 +41,12 @@ export function Contact() {
         </Words>
 
         <div className="mt-16 flex flex-wrap items-center gap-x-12 gap-y-6">
-          <Button href={`mailto:${site.email}`}>Start a conversation</Button>
-          <Button href={`tel:${site.phone}`} quiet>
+          <Button href={site.whatsapp}>{cta.whatsapp}</Button>
+          <Button href={`tel:${site.phone.replace(/ /g, "")}`} quiet>
             {site.phone}
+          </Button>
+          <Button href={`mailto:${site.email}`} quiet>
+            {site.email}
           </Button>
         </div>
       </div>

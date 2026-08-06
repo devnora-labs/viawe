@@ -15,23 +15,34 @@ export function Partner() {
             </h2>
 
             <Words className="lead mt-12 max-w-md">
-              Most businesses lose weeks in the gaps between vendors: the
-              designer waiting on the developer, the agency waiting on the
-              staffing firm.
+              Good growth should not break between vendors, teams and handoffs.
+              But it does: the designer waits on the developer, the agency
+              waits on the printer.
             </Words>
 
             <Words className="mt-8 max-w-md text-stone">
-              We put that work under one roof and one point of contact, so the
-              thread never drops. You explain it once.
+              Via-We coordinates the parts of business execution that are
+              normally split across different vendors — one roof, one point of
+              contact, one thread. You explain it once.
             </Words>
           </div>
 
           <div className="md:col-span-4 md:col-start-6 md:pt-32">
-            <Media shot={shots.thread} ratio="3 / 4" depth={0.18} sizes="(max-width: 768px) 100vw, 30vw" />
+            <Media
+              shot={shots.team}
+              ratio="3 / 4"
+              depth={0.18}
+              sizes="(max-width: 768px) 100vw, 30vw"
+            />
           </div>
 
           <div className="md:col-span-3 md:col-start-10 md:pt-2">
-            <Media shot={shots.floor} ratio="4 / 5" depth={0.14} sizes="(max-width: 768px) 100vw, 25vw" />
+            <Media
+              shot={shots.table}
+              ratio="4 / 5"
+              depth={0.14}
+              sizes="(max-width: 768px) 100vw, 25vw"
+            />
           </div>
         </div>
       </div>

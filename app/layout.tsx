@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang="en" className={instrument.variable}>
       <head>
         <noscript>
-          <style>{`[data-motion]{opacity:1!important;transform:none!important}`}</style>
+          <style>{`[data-motion]{opacity:1!important;transform:none!important;stroke-dasharray:none!important;stroke-dashoffset:0!important}`}</style>
         </noscript>
       </head>
       <body>

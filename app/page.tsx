@@ -1,5 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
-import { Routes } from "@/components/sections/Routes";
+import { Ecosystem } from "@/components/sections/Ecosystem";
 import { Partner } from "@/components/sections/Partner";
 import { Pathway } from "@/components/sections/Pathway";
 import { Approach } from "@/components/sections/Approach";
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Routes />
+      <Ecosystem />
       <Partner />
       <Pathway />
       <Approach />

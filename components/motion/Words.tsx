@@ -9,7 +9,9 @@ import {
   type MotionValue,
 } from "motion/react";
 
-const dim = 0.14;
+// The resting floor stays AA-legible on paper (docs/design/04): a paragraph
+// parked mid-scrub must still read as text, not as a broken reveal.
+const dim = 0.62;
 const spread = 0.75;
 const hold = 0.22;
 
@@ -50,9 +52,11 @@ export function Words({
   const box = useRef<HTMLParagraphElement>(null);
   const still = useReducedMotion();
 
+  // Completes by 68% viewport height so sentences finish inside the
+  // comfortable reading zone (docs/design/04).
   const { scrollYProgress } = useScroll({
     target: box,
-    offset: ["start 0.9", "end 0.55"],
+    offset: ["start 0.92", "end 0.68"],
   });
 
   const words = children.split(" ");
