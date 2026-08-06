@@ -1,8 +1,20 @@
+// Named media slots (docs/project/architect.md → Media architecture). Real
+// photography replaces a slot's src without layout rewrites; alt text always
+// describes what is actually pictured — no stand-in is captioned as Via-We's
+// own. Every current frame is a `placeholder` awaiting the Vijayawada shoot.
+//
 // Two fixed source queries so next.config can pin `search` to exact matches:
-// a 4K plate for the full-bleed hero, a lighter one everywhere else. Pulling
-// every image at 4K makes the optimizer time out on the heavier originals.
+// a 4K plate for full-bleed moments, a lighter one everywhere else.
+export type MediaSlot = {
+  id: string;
+  purpose: string;
+  src: string | null;
+  alt: string;
+  status: "ready" | "placeholder" | "approval-required";
+};
+
 export const sources = {
-  hero: "?auto=format&fit=crop&q=80&w=3840",
+  full: "?auto=format&fit=crop&q=80&w=3840",
   section: "?auto=format&fit=crop&q=80&w=1800",
 };
 
@@ -10,67 +22,88 @@ const shot = (id: string, source = sources.section) =>
   `https://images.unsplash.com/photo-${id}${source}`;
 
 export const shots = {
-  hero: {
-    src: shot("1449157291145-7efd050a4d0e", sources.hero),
-    alt: "Office towers rising into low cloud",
+  office: {
+    id: "office",
+    purpose: "hero human frame — first evidence the company is made of people",
+    src: shot("1543269865-cbf427effbad"),
+    alt: "A team gathered around a table, working through a plan together",
+    status: "placeholder",
   },
-  business: {
-    src: shot("1486406146926-c627a92ad1ab"),
-    alt: "Glass towers seen from the street below",
+  team: {
+    id: "team",
+    purpose: "belief chapter — people doing the work",
+    src: shot("1522071820081-009f0129c71c"),
+    alt: "A small team working together over laptops",
+    status: "placeholder",
   },
-  everyday: {
-    src: shot("1523217582562-09d0def993a6"),
-    alt: "A house of clean white volumes in afternoon light",
+  table: {
+    id: "table",
+    purpose: "belief chapter — the shared table",
+    src: shot("1519389950473-47ba0277781c"),
+    alt: "Laptops and notebooks across a shared work table, seen from above",
+    status: "placeholder",
   },
-  thread: {
-    src: shot("1524230572899-a752b3835840"),
-    alt: "A long arched corridor running to a single opening",
-  },
-  floor: {
-    src: shot("1504384308090-c894fdcc538d"),
-    alt: "An open working floor under exposed ceilings",
-  },
-  plan: {
-    src: shot("1503387762-592deb58ef4e"),
-    alt: "An architect drawing a floor plan by hand",
+  setup: {
+    id: "setup",
+    purpose: "road stage — setup",
+    src: shot("1581092160562-40aa08e78837"),
+    alt: "Hands drafting a technical plan beside a toolbox",
+    status: "placeholder",
   },
   brand: {
-    src: shot("1494891848038-7bd202a2afeb"),
-    alt: "Crimson and graphite panels meeting at a sharp edge",
+    id: "brand",
+    purpose: "road stage — brand",
+    src: shot("1561070791-2526d30994b5"),
+    alt: "Colour swatches and brand designs spread on a desk",
+    status: "placeholder",
   },
   build: {
-    src: shot("1470075801209-17f9ec0cada6"),
-    alt: "A glass structure with traffic streaking past its base",
+    id: "build",
+    purpose: "road stage — build",
+    src: shot("1498050108023-c5249f4df085"),
+    alt: "A laptop on a clean desk showing code",
+    status: "placeholder",
   },
-  reach: {
-    src: shot("1465447142348-e9952c393450"),
-    alt: "A highway interchange braiding together from above",
+  market: {
+    id: "market",
+    purpose: "road stage — market",
+    src: shot("1551288049-bebda4e38f71"),
+    alt: "A screen of campaign analytics charts",
+    status: "placeholder",
   },
-  scale: {
-    src: shot("1477959858617-67f85cf4f1df"),
-    alt: "A dense skyline seen from above at first light",
+  grow: {
+    id: "grow",
+    purpose: "road stage — grow",
+    src: shot("1441984904996-e0b6ba687e04"),
+    alt: "A retail store interior with racks ready for customers",
+    status: "placeholder",
   },
-  approach: {
-    src: shot("1502005229762-cf1b2da7c5d6"),
-    alt: "A staircase climbing through a light-filled interior",
-  },
-  closing: {
-    src: shot("1518005020951-eccb494ad742"),
-    alt: "A curved facade rising above the street",
-  },
-  night: {
+  expand: {
+    id: "expand",
+    purpose: "road stage — expand",
     src: shot("1470723710355-95304d8aece4"),
     alt: "Traffic drawing light trails through a city at night",
+    status: "placeholder",
   },
-};
-
-// Short muted loops that fade in over the still on hover. Kept to the SD
-// renditions so a first hover starts playing without a visible wait.
-const clip = (id: string, file: string) =>
-  `https://videos.pexels.com/video-files/${id}/${id}-${file}.mp4`;
-
-export const clips = {
-  business: clip("1721294", "sd_640_360_25fps"),
-  everyday: clip("3444434", "sd_640_360_30fps"),
-  night: clip("2099536", "sd_640_360_30fps"),
-};
+  approach: {
+    id: "approach",
+    purpose: "rhythm chapter band — the work planned in the open",
+    src: shot("1531973576160-7125cd663d86", sources.full),
+    alt: "An open office floor with people working at long tables",
+    status: "placeholder",
+  },
+  closing: {
+    id: "closing",
+    purpose: "begin chapter backdrop",
+    src: shot("1497366216548-37526070297c", sources.full),
+    alt: "A calm modern office corridor",
+    status: "placeholder",
+  },
+  desk: {
+    id: "desk",
+    purpose: "menu panel",
+    src: shot("1520333789090-1afc82db536a"),
+    alt: "A creative working between a phone and a laptop at a studio desk",
+    status: "placeholder",
+  },
+} satisfies Record<string, MediaSlot>;

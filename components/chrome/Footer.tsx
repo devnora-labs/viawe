@@ -14,8 +14,11 @@ export function Footer() {
         <div>
           <p className="text-base text-stone">Talk to a person</p>
           <div className="mt-6 flex flex-col gap-2">
-            <a href={`tel:${site.phone}`} className="link w-fit">
+            <a href={`tel:${site.phone.replace(/ /g, "")}`} className="link w-fit">
               {site.phone}
+            </a>
+            <a href={site.whatsapp} className="link w-fit">
+              WhatsApp
             </a>
             <a href={`mailto:${site.email}`} className="link w-fit">
               {site.email}
@@ -44,8 +47,8 @@ export function Footer() {
       <div className="shell">
         <div className="rule flex flex-col justify-between gap-4 py-10 text-sm text-stone md:flex-row">
           <p>
-            © {new Date().getFullYear()} Via-We Services Private Limited.
-            Operating from {site.base}.
+            © {new Date().getFullYear()} {site.legal} — operating from{" "}
+            {site.base}.
           </p>
           <nav className="flex gap-8">
             {nav.map((item) => (

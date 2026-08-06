@@ -12,8 +12,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const queries = ["(min-width: 1024px)", "(prefers-reduced-motion: reduce)"];
 
-const heading = "The business growth pathway";
-const closing = "From the first plan to the next location, the work stays connected.";
+const heading = "The road — from dream to expansion";
+const closing = "The work stays connected. So do we.";
 
 function useCanPin() {
   return useSyncExternalStore(
@@ -120,7 +120,7 @@ export function Pathway() {
               <li
                 key={stage.name}
                 className={`h-0.5 flex-1 transition-colors duration-500 ${
-                  i <= active ? "bg-signal" : "bg-cloud/15"
+                  i <= active ? "bg-spark" : "bg-cloud/15"
                 }`}
               />
             ))}
@@ -140,7 +140,7 @@ export function Pathway() {
             ))}
           </div>
 
-          <p className="mt-24 max-w-xl text-stone">{closing}</p>
+          <p className="mt-24 max-w-xl text-cloud/60">{closing}</p>
         </div>
       )}
     </section>

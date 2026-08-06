@@ -1,15 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #101317;
-  --color-paper: #f3f2ee;
-  --color-paper-deep: #e5e3dc;
-  --color-stone: #8a8983;
-  --color-signal: #df4a32;
-  --color-signal-dark: #b83725;
-  --color-cloud: #faf9f5;
+  /* The blue identity comes straight from the final Via-We mark:
+     ink is the guideline navy #1B4B77 taken near-black, sea and spark
+     are the mark's own mid and bright curve colours. */
+  --color-ink: #0b1826;
+  --color-paper: #f4f6f9;
+  --color-paper-deep: #e6ebf1;
+  --color-stone: #66768a;
+  --color-brand: #1b4b77;
+  --color-brand-deep: #143a5e;
+  --color-sea: #3582ad;
+  --color-spark: #4ad3f3;
+  --color-cloud: #fafcfe;
 
+  /* Instrument Sans is the production placeholder, not the final face.
+     When the official Via-We display typeface is licensed, load it in
+     layout.tsx and repoint --font-display — nothing else changes. */
   --font-sans: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -42,12 +51,13 @@
   }
 
   ::selection {
-    background: var(--color-signal);
-    color: var(--color-cloud);
+    background: var(--color-spark);
+    color: var(--color-ink);
   }
 
+  /* Sea reads on both paper and ink surfaces; brand navy vanishes on dark. */
   :focus-visible {
-    outline: 2px solid var(--color-signal);
+    outline: 2px solid var(--color-sea);
     outline-offset: 4px;
   }
 }
@@ -65,6 +75,7 @@
   }
 
   .display {
+    font-family: var(--font-display);
     font-weight: 700;
     letter-spacing: -0.03em;
     line-height: 0.86;
@@ -72,13 +83,13 @@
   }
 
   .hero {
-    /* Four lines of it have to fill the fold, so the cap is tied to viewport
+    /* Three beats have to fill the fold, so the cap is tied to viewport
        height as well as width. Lighter than the rest of the display type:
        at this size weight reads as heaviness, not emphasis. */
-    font-size: clamp(2.5rem, min(16vw, 23vh), 16rem);
+    font-size: clamp(2.5rem, min(16vw, 26vh), 17rem);
     font-weight: 400;
     letter-spacing: -0.035em;
-    line-height: 0.88;
+    line-height: 0.9;
   }
 
   .title {
@@ -122,7 +133,8 @@
     background: currentColor;
     transform: scaleX(0);
     transform-origin: right center;
-    transition: transform 0.7s var(--ease-out);
+    /* micro tier: 0.3s (docs/design/04) */
+    transition: transform 0.3s var(--ease-out);
     will-change: transform;
   }
 
@@ -143,6 +155,8 @@
   [data-motion] {
     opacity: 1 !important;
     transform: none !important;
+    stroke-dasharray: none !important;
+    stroke-dashoffset: 0 !important;
   }
 
   *,

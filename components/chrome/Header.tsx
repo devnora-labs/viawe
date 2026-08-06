@@ -59,14 +59,25 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-40">
-      <div className="shell flex items-center justify-between py-8 text-white mix-blend-difference">
-        <a href="#top" className="label text-base tracking-[0.14em]">
-          {site.name}
+      {/* The bar lives on the light hero, so it reads in ink; once scrolled
+          past, everything hands over to the pill, whose own surface keeps it
+          legible over any section underneath. */}
+      <div className="shell flex items-center justify-between py-7">
+        <a
+          href="#top"
+          className={`flex items-center gap-3.5 text-ink transition-opacity duration-500 ${
+            past ? "pointer-events-none opacity-0" : "opacity-100"
+          }`}
+        >
+          <Image src="/brand/mark.png" alt="" width={28} height={31} />
+          <span className="label text-base uppercase tracking-[0.14em]">
+            {site.name}
+          </span>
         </a>
 
         <div className="flex items-center gap-12">
           <nav
-            className={`hidden items-center gap-10 transition-opacity duration-500 md:flex ${
+            className={`hidden items-center gap-10 text-ink transition-opacity duration-500 md:flex ${
               past ? "pointer-events-none opacity-0" : "opacity-100"
             }`}
           >
@@ -81,12 +92,12 @@ export function Header() {
             type="button"
             onClick={() => setOpen(true)}
             aria-expanded={open}
-            className={`label flex items-center gap-3 transition-opacity duration-500 ${
+            className={`label flex items-center gap-3 rounded-full border border-ink/10 bg-cloud/90 px-5 py-2.5 text-ink backdrop-blur transition-opacity duration-500 ${
               past ? "" : "md:pointer-events-none md:opacity-0"
             }`}
           >
             Menu
-            <Menu size={20} />
+            <Menu size={18} />
           </button>
         </div>
       </div>
@@ -109,7 +120,7 @@ export function Header() {
                 variants={rise(0)}
                 className="shell flex items-center justify-between py-8"
               >
-                <span className="label text-base tracking-[0.14em]">
+                <span className="label text-base uppercase tracking-[0.14em]">
                   {site.name}
                 </span>
                 <button
@@ -129,8 +140,8 @@ export function Header() {
                 >
                   <motion.div variants={rise(4)} className="absolute inset-0">
                     <Image
-                      src={shots.thread.src}
-                      alt={shots.thread.alt}
+                      src={shots.desk.src}
+                      alt={shots.desk.alt}
                       fill
                       sizes="30vw"
                       className="object-cover"
@@ -174,8 +185,11 @@ export function Header() {
                 variants={rise(8)}
                 className="shell flex flex-wrap items-center justify-between gap-x-12 gap-y-4 py-10 text-stone"
               >
-                <a href={`tel:${site.phone}`} className="link">
+                <a href={`tel:${site.phone.replace(/ /g, "")}`} className="link">
                   {site.phone}
+                </a>
+                <a href={site.whatsapp} className="link">
+                  WhatsApp
                 </a>
                 <a href={`mailto:${site.email}`} className="link">
                   {site.email}
